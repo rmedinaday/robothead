@@ -12,7 +12,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='robothead',
-    version='0.1.0',
+    version='0.1.1',
     description='robotheaad PCA9685 servo-actuated face control', 
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -33,5 +33,6 @@ setup(
     python_requires=">=3.8, <4",
     install_requires=['PyYAML'],
     license='MIT',
+    package_data={'robothead': ['robothead.config.sample']},
 )
 

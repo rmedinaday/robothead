@@ -1,0 +1,63 @@
+---
+lcd:
+  address: 0x27
+  columns: 20
+  rows: 4
+audio:
+  file: "./audio/test.wav"
+head:
+  address: 0x40
+  bus: 0
+  freq: 60
+  servos:
+    h_eyes:
+      id: 0
+      enabled: 1
+      max: 500
+      center: 400
+      min: 300
+    v_eyes:  
+      id: 2
+      enabled: 1
+      min: 310
+      center: 370
+      max: 430
+    jaw:
+      id: 4
+      enabled: 1
+      min: 250
+      center: 320
+      max: 390
+    turn:
+      id: 6
+      enabled: 0
+      min: 340
+      center: 365
+      max: 390
+    lift:
+      id: 8
+      enabled: 1
+      min: 300
+      center: 400
+      max: 500
+neck:
+  address: 0x40
+  bus: 0
+  freq: 60
+  tilt:
+    id: 8
+    enabled: 0
+    min: 340
+    center: 365
+    max: 390
+  lift:
+    id: 10
+    enabled: 0
+    min: 340
+    center: 365
+    max: 390
+input:
+  trigger:
+    pin: 7
+...
+
