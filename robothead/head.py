@@ -1,5 +1,5 @@
-import robothead.servo
-import robothead.dummyPwm
+from robothead.servo import servo
+from robothead.dummyPwm import dummyPwm
 try:
     import Adafruit_PCA9685
 except ImportError:
@@ -17,11 +17,11 @@ class head:
             self.controller = Adafruit_PCA9685.PCA9685(
                     address=self.address, busnum=self.bus)
         except NameError:
-            self.controller = dummyPwm.dummyPwm(
+            self.controller = dummyPwm(
                 address=self.address, busnum=self.bus)
         self.controller.set_pwm_freq(self.freq)
         for name in self.config['servos'].keys():
-            self.servos[name] = servo.servo(self.controller, name, self.config['servos'][name])
+            self.servos[name] = servo(self.controller, name, self.config['servos'][name])
     
     def _validate_config(self):
         params = self.config.keys()

@@ -68,7 +68,7 @@ class _Default:
 # direction must be IN or OUT, pull_up_down must be PUD_OFF, PUD_UP or
 # PUD_DOWN and is only valid when direction in IN, initial must be HIGH or LOW
 # and is only valid when direction is OUT
-def setup(channels, direction, pull_up_down=_Default(PUD_OFF), initial=None, consumer='Jetson-gpio'):
+def setup(channels, direction, pull_up_down=PUD_OFF, initial=None, consumer='Jetson-gpio'):
     if direction != OUT and direction != IN:
         raise ValueError("An invalid direction was passed to setup()")
 
